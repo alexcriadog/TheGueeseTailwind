@@ -1,10 +1,10 @@
-<header class="header">
-  <div class="header__logo">
-      <a href="./index.html"><img class="header__logo--title" src="./assets/images/the_gueese_logo.png" ></a>
-  </div>
-  <nav class="header__navbar navbar navbar-light">
-    <a class="header__navbar--pages navbar-brand text-primary {{ if (currentPage === 'members') { 'actual' } }}" href="./members.html">MEMBERS</a>
-    <a class="header__navbar--pages navbar-brand text-primary {{ if (currentPage === 'noticias') { 'actual' } }}" href="./noticias.html">HISTORIA</a>
-    <a class="header__navbar--pages navbar-brand text-primary {{ if (currentPage === 'contact') { 'actual' } }}" href="./contact.html">CONTACTANOS</a>
-  </nav>
+<header class="header text-principal-color bg-secondary-color-opacity flex-1 max-h-100 w-full flex justify-between items-center md:pr-3 fixed">
+    <div>
+        <a href="./index.html"><img class="max-h-20 w-auto font-bold hover:scale-110" src="./assets/images/the_gueese_logo.png" ></a>
+    </div>
+    <nav class="header__navbar">
+      <a class="hover:scale-110 hover:underline hover:decoration-third-color hover:decoration-4 hover:underline-offset-8 ml-1 md:ml-3.5 font-bold {{ if (currentPage === 'members') { 'underline decoration-third-color decoration-2 underline-offset-8' } }}" href="./index.html">MEMBERS</a>
+      <a class="hover:scale-110 hover:underline hover:decoration-third-color hover:decoration-4 hover:underline-offset-8 ml-1 md:ml-3.5 font-bold {{ if (currentPage === 'historia') { 'underline decoration-third-color decoration-2 underline-offset-8' } }}" href="./index.html">HISTORIA</a>
+      <a class="hover:scale-110 hover:underline hover:decoration-third-color hover:decoration-4 hover:underline-offset-8 ml-1 md:ml-3.5 font-bold {{ if (currentPage === 'contact') { 'underline decoration-third-color decoration-2 underline-offset-8' } }}" href="./contact.html">CONTACTANOS</a>
+    </nav>
 </header>

@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-
 <html>
-  <include src="views/_head.html" locals='{"title": "The Gueese - Contact"}'></include>
-  <body>
-    <include src="views/_header.html" locals='{ "currentPage": "contact"}'></include>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>UOC Boilerplate</title>
+  </head>
+  <body class="flex flex-col h-screen bg-secondary-color">
+    <include src="./views/_header.html" locals='{ "currentPage": "contact"}'></include>
 
-    <form class="form">
+    <form class="flex flex-col justify-center m-24 md:my-36 md:mx-48">
         <!-- 2 column grid layout with text inputs for the first and last names -->
-        <div class="row mb-4">
-          <div class="col">
-            <div class="form-outline">
-              <input type="text" id="form6Example1" class="form-control" />
-              <label class="form-label" for="form6Example1">NOMBRE</label>
-            </div>
+        <div class="flex mb-4 min-w-full">
+          <div class="flex-1">
+            <include src="./views/_input.html" locals='{ "text": "NOMBRE", "type":"text"}'></include>
           </div>
-          <div class="col">
-            <div class="form-outline">
-              <input type="text" id="form6Example2" class="form-control" />
-              <label class="form-label" for="form6Example2">APELLIDOS</label>
-            </div>
+          <div class="flex-1 ml-2">
+            <include src="./views/_input.html" locals='{ "text": "APELLIDOS", "type":"text"}'></include>
           </div>
         </div>
-      
+        
         <!-- Text input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="form6Example4" class="form-control" />
-          <label class="form-label" for="form6Example4">DIRECCIÓN</label>
-        </div>
-      
+        <include src="./views/_input.html" locals='{ "text": "DIRECCIÓN", "type":"text"}'></include>
+
         <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="form6Example5" class="form-control" />
-          <label class="form-label" for="form6Example5">CORREO</label>
-        </div>
+        <include src="./views/_input.html" locals='{ "text": "CORREO", "type":"email"}'></include>
       
         <!-- Number input -->
-        <div class="form-outline mb-4">
-          <input type="number" id="form6Example6" class="form-control" />
-          <label class="form-label" for="form6Example6">NUMERO</label>
-        </div>
+        <include src="./views/_input.html" locals='{ "text": "NUMERO", "type":"number"}'></include>
       
         <!-- Message input -->
         <div class="form-outline mb-4">
-          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
-          <label class="form-label" for="form6Example7">MENSAJE</label>
+          <textarea class="shadow appearance-none border border-4 border-principal-color rounded w-full py-2 px-3 text-secondary-color leading-tight focus:outline-none focus:shadow-outline" id="form6Example7" rows="4"></textarea>
+          <label class="block text-principal-color text-sm font-bold mb-2" for="form6Example7">MENSAJE</label>
         </div>
       
         <!-- Submit button -->
