@@ -1,0 +1,19 @@
+//CONTACT
+.form {
+  margin: 150px 300px;
+}
+
+.form label {
+  color: $principal-color;
+}
+
+.form input,
+.form textarea {
+  border: 5px solid $principal-color;
+}
+
+@media (max-width: 960px) {
+  .form {
+    margin: 100px 100px;
+  }
+}
